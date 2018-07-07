@@ -12,6 +12,9 @@ import Navbar from '../components/Navbar/Navbar';
 import Register from '../components/Register/Register';
 // import SingleOrder from '../components/SingleOrder/SingleOrder';
 
+import fbConnection from '../firebaseRequests/connection';
+fbConnection();
+
 const PrivateRoute = ({ component: Component, authed, ...rest}) => {
   return (
     <Route
