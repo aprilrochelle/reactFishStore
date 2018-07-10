@@ -1,6 +1,7 @@
 import React from 'react';
 import './Inventory.css';
 import fishRequests from '../../firebaseRequests/fishes';
+import Fish from '../Fish/Fish';
 
 class Inventory extends React.Component {
   state = {
@@ -21,11 +22,14 @@ class Inventory extends React.Component {
   render () {
     const fishComponents = this.state.fishes.map((fish) => {
       return (
-        <h2>{fish.name}</h2>
+        <Fish
+          key={fish.id}
+          details={fish}
+        />
       );
     });
     return (
-      <div className="Inventory">
+      <div className="Inventory col-xs-12">
         <h1>Inventory</h1>
         <ul className="fishes">
           {fishComponents}
