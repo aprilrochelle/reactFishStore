@@ -4,7 +4,6 @@ import formatPrice from '../../helpers';
 
 class Fish extends React.Component {
   addClickEvent = () => {
-    console.error('fish?', this.props.details.id);
     this.props.addToOrder(this.props.details.id);
   }
 

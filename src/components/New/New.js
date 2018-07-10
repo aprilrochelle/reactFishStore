@@ -46,7 +46,10 @@ class New extends React.Component {
             {fishComponents}
           </ul>
         </div>
-        <Order />
+        <Order
+          fishes={this.state.fishes}
+          order={this.state.order}
+        />
       </div>
     );
   }
